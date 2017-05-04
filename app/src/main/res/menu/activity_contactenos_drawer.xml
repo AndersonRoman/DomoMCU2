@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_principal"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Principal" />
+        <item
+            android:id="@+id/nav_iluminacion"
+            android:icon="@drawable/ic_iluminacion"
+            android:title="Iluminación" />
+        <item
+            android:id="@+id/nav_actuadores"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Actuadores" />
+        <item
+            android:id="@+id/nav_habitaciones"
+            android:icon="@drawable/ic_habitaciones"
+            android:title="Habitaciones" />
+        <item
+            android:id="@+id/nav_indicadores"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Indicadores" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_notificaciones"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Notificaciones" />
+            <item
+                android:id="@+id/nav_cerrar"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Cerrar sesion" />
+
+        </menu>
+    </item>
+
+</menu>

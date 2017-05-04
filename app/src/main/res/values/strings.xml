@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="Titulo">Titulo</string>
+    <string name="UserName">UserName</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registro">Registro</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="repassword">Repetir Contraseña</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="registrarse">REGISTRARSE</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="titulo">San Vicente</string>
+    <string name="miperfil">Mi Perfil</string>
+    <string name="cerrar">Cerrar Sesión</string>
+    <string name="principal">Principal</string>
+
+    <string name="app_name">DomoMCU</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_actuadores">ActuadoresActivity</string>
+    <string name="title_activity_configuraciones">ConfiguracionesActivity</string>
+    <string name="title_activity_contactenos">ContactenosActivity</string>
+    <string name="title_activity_habitaciones">HabitacionesActivity</string>
+    <string name="title_activity_iluminacion">IluminacionActivity</string>
+    <string name="title_activity_notificaciones">NotificacionesActivity</string>
+    <string name="title_activity_sensores">SensoresActivity</string>
+    <string name="configuraciones">Configuraciones</string>
+</resources>

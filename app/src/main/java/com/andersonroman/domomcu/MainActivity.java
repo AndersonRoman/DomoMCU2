@@ -14,12 +14,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     String username="Anderson", correo="ander-353@hotmail.com";
     Intent intent;
+
+    //TextView tName,tId,tCorreo;
 
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
@@ -30,6 +36,9 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+/*
+        tName=(TextView) findViewById(R.id.tName);
+        tId=(TextView)findViewById(R.id.tId);*/
 
         this.setTitle("Menú Principal");
 
@@ -39,6 +48,23 @@ public class MainActivity extends AppCompatActivity
         Bundle extras=getIntent().getExtras();
         username=extras.getString("username");
         correo=extras.getString("correo");
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // Name, email address, and profile photo Url
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+
+            goLoginFaceActivity();
+
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getToken() instead.
+            String uid = user.getUid();
+        }
+/*
+        tName.setText(extras.getString("name"));
+        tId.setText(extras.getString("id"));*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -51,6 +77,13 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
+    private void goLoginFaceActivity() {
+        intent=new Intent(MainActivity.this,LoginFaceActivity.class);
+        startActivity(intent);
+    }
+
+    public void logout(){}
 
     @Override
     public void onBackPressed() {
@@ -65,7 +98,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.configuraciones, menu);
         return true;
     }
 

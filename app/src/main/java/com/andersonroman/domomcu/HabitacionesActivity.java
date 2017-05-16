@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 
 public class HabitacionesActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,12 +25,20 @@ public class HabitacionesActivity extends AppCompatActivity
 
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
+
+    RadioButton rHab1, rHab2,rHab3;
+    ImageView iHabs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_habitaciones);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        rHab1= (RadioButton) findViewById(R.id.rHab1);
+        rHab2= (RadioButton) findViewById(R.id.rHab2);
+        rHab3=(RadioButton) findViewById(R.id.rHab3);
+        iHabs=(ImageView)findViewById(R.id.iHabs);
 
         this.setTitle("Estado de Habitaciones");
 
@@ -49,6 +59,34 @@ public class HabitacionesActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void click(android.view.View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.rHab1:
+                if (checked) {
+                    rHab2.setChecked(false);
+                    rHab3.setChecked(false);
+                    iHabs.setImageResource(R.drawable.hab1);
+                }
+                break;
+            case R.id.rHab2:
+                if (checked) {
+                    rHab1.setChecked(false);
+                    rHab3.setChecked(false);
+                    iHabs.setImageResource(R.drawable.hab2);
+                }
+                break;
+            case R.id.rHab3:
+                if (checked) {
+                    rHab2.setChecked(false);
+                    rHab1.setChecked(false);
+                    iHabs.setImageResource(R.drawable.hab3);
+                }
+                break;
+        }
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -14,7 +14,7 @@
 
         <item
             android:id="@+id/nav_habitaciones"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_habitaciones"
             android:title="Habitaciones" />
         <item
             android:id="@+id/nav_indicadores"
@@ -31,11 +31,11 @@
         <menu>
             <item
                 android:id="@+id/nav_notificaciones"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_notificacion"
                 android:title="Notificaciones" />
             <item
                 android:id="@+id/nav_cerrar"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_cerrar"
                 android:title="Cerrar sesion" />
 
         </menu>

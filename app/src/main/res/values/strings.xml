@@ -29,4 +29,7 @@
     <string name="title_activity_notificaciones">NotificacionesActivity</string>
     <string name="title_activity_sensores">SensoresActivity</string>
     <string name="configuraciones">Configuraciones</string>
+    <string name="facebook_app_id">122399971654165</string>
+    <string name="nombre">Nombre</string>
+    <string name="id">Id</string>
 </resources>

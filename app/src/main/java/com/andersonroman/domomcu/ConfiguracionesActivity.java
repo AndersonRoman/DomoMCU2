@@ -108,7 +108,31 @@ public class ConfiguracionesActivity extends AppCompatActivity
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_actuadores) {
+        }
+        else if (id == R.id.nav_principal) {
+            intent= new Intent(ConfiguracionesActivity.this,MainActivity.class);
+            intent.putExtra("username",username);
+            intent.putExtra("correo",correo);
+            startActivity(intent);
+            finish();
+
+        }
+        else if (id == R.id.nav_notificaciones) {
+            intent= new Intent(ConfiguracionesActivity.this,NotificacionesActivity.class);
+            intent.putExtra("username",username);
+            intent.putExtra("correo",correo);
+            startActivity(intent);
+            finish();
+
+        }
+        else if (id == R.id.nav_contactenos) {
+            intent= new Intent(ConfiguracionesActivity.this,ContactenosActivity.class);
+            intent.putExtra("username",username);
+            intent.putExtra("correo",correo);
+            startActivity(intent);
+            finish();
+
+        }else if (id == R.id.nav_actuadores) {
             intent= new Intent(ConfiguracionesActivity.this,ActuadoresActivity.class);
             intent.putExtra("username",username);
             intent.putExtra("correo",correo);
